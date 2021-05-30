@@ -5,12 +5,14 @@ global:
 rule_files:
   - 'rules.yml'
 
+# TODO: make target configurables
 alerting:
   alertmanagers:
   - static_configs:
     - targets:
       - localhost:9093
 
+# TODO: make target configurable
 scrape_configs:
   - job_name: 'prometheus'
     scrape_interval: 5s
