@@ -5,7 +5,7 @@ global:
 rule_files:
   - 'rules.yml'
 
-# TODO: make target configurables
+# TODO: make target configurable
 alerting:
   alertmanagers:
   - static_configs:

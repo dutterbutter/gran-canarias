@@ -8,7 +8,7 @@ To getting started make use of the module by adding the following line to Terraf
 
 ```terraform
 module "monitoring" {
-  source = "github.com/Lanseuo/terraform-prometheus-grafana"
+  source = "github.com/dutterbutter/gran-canarias"
 
   prometheus_hostname   = "prometheus.example.com"
   alertmanager_hostname = "alertmanager.example.com"
@@ -43,6 +43,8 @@ To use your own configuration you have to apply the following folder structure:
     - alertmanager.yml
   - grafana
     - provisioning
+      - dashboards
+          dashboard.yml
       - datasources
           datasource.yml
     - grafana.ini
