@@ -1,12 +1,3 @@
-module "monitoring" {
-  source = "github.com/dutterbutter/gran-canarias"
-
-  prometheus_hostname   = "prometheus.example.com"
-  alertmanager_hostname = "alertmanager.example.com"
-  grafana_hostname      = "grafana.example.com"
-  config_bucket_name    = "my-monitoring-config"
-}
-
 module "prometheus" {
   source              = "./modules/prometheus"
   hostname            = var.hostname_prometheus

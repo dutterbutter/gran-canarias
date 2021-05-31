@@ -1,7 +1,7 @@
 resource "aws_instance" "instance" {
   ami                  = var.instance_ami
   instance_type        = var.instance_type
-  availability_zone    = "eu-central-1c"
+  availability_zone    = var.region
   user_data            = data.template_file.cloud_config_script.rendered
   security_groups      = [var.security_group_name]
   iam_instance_profile = var.instance_profile
