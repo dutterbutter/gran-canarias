@@ -1,0 +1,34 @@
+- name: Wait for system ready
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: Wait for nodes to become reachable
+    wait_for_connection:
+
+- name: nginx-auth
+  hosts: validator
+  become: yes
+  strategy: free
+  roles:
+  - nginx-auth 
+
+- name: prometheus
+  hosts: validator
+  become: yes
+  strategy: free
+  roles:
+    - d
+
+- name: grafana
+  hosts: validator
+  become: yes
+  strategy: free
+  roles:
+    - d
+
+- name: alert-manager
+  hosts: validator
+  become: yes
+  strategy: free
+  roles:
+    - d
