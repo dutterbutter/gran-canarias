@@ -5,7 +5,7 @@ module "prometheus" {
   config_bucket_name  = var.config_bucket_name
   letsencrypt_email   = var.letsencrypt_email
   security_group_name = aws_security_group.security_group.name
-  key_name            = var.key_name
+  monitoring_keys     = var.monitoring_keys
   instance_ami        = data.aws_ami.ubuntu.id
   instance_profile    = aws_iam_instance_profile.ec2_profile.name
   instance_type       = "t2.micro"
@@ -18,7 +18,7 @@ module "alertmanager" {
   config_bucket_name  = var.config_bucket_name
   letsencrypt_email   = var.letsencrypt_email
   security_group_name = aws_security_group.security_group.name
-  key_name            = var.key_name
+  monitoring_keys     = var.monitoring_keys
   instance_ami        = data.aws_ami.ubuntu.id
   instance_profile    = aws_iam_instance_profile.ec2_profile.name
 }
@@ -30,7 +30,7 @@ module "grafana" {
   config_bucket_name  = var.config_bucket_name
   letsencrypt_email   = var.letsencrypt_email
   security_group_name = aws_security_group.security_group.name
-  key_name            = var.key_name
+  monitoring_keys     = var.monitoring_keys
   instance_ami        = data.aws_ami.ubuntu.id
   instance_profile    = aws_iam_instance_profile.ec2_profile.name
 }

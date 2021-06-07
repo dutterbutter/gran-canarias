@@ -1,3 +1,8 @@
+resource "aws_key_pair" "monitoring_keys" {
+  key_name   = "monitoring_keys"
+  public_key = var.monitoring_keys
+}
+
 resource "aws_instance" "instance" {
   ami                  = var.instance_ami
   instance_type        = var.instance_type
@@ -5,7 +10,7 @@ resource "aws_instance" "instance" {
   user_data            = data.template_file.cloud_config_script.rendered
   security_groups      = [var.security_group_name]
   iam_instance_profile = var.instance_profile
-  key_name             = var.key_name
+  key_name             = aws_key_pair.monitoring_keys.key_name
 
   tags = {
     Name = "Monitoring - Prometheus"

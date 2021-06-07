@@ -25,7 +25,7 @@ variable "instance_profile" {
   type        = string
 }
 
-variable "key_name" {
+variable "monitoring_keys" {
   description = "Key name for EC2 instance"
   type        = string
 }

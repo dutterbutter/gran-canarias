@@ -34,8 +34,7 @@ variable "letsencrypt_email" {
   type        = string
 }
 
-variable "key_name" {
+variable "monitoring_keys" {
   description = "Key name for EC2 instances"
   type        = string
-  default     = ""
 }
