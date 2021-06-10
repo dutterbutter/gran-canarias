@@ -1,6 +1,6 @@
 # Terraform Module for Monitoring using Prometheus, Alertmanager and Grafana
 
-This Terraform module makes it easy to setup [Prometheus](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager) and [Grafana](https://grafana.com/) on AWS in a single EC2 instance.
+This Terraform module makes it easy to setup [Prometheus](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager) and [Grafana](https://grafana.com/) on AWS.
 
 ## Usage
 
@@ -16,7 +16,7 @@ Now you can deploy to AWS:
 terraform apply
 ```
 
-This will create the necessary EC2 instance, the S3 bucket which is used for configuration, the necessary IAM configuration as well as the security groups.
+This will create the necessary EC2 instances, the S3 bucket which is used for configuration, the necessary IAM configuration as well as the security groups.
 
 ## Configuration
 
