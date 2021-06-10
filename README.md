@@ -4,19 +4,6 @@ This Terraform module makes it easy to setup [Prometheus](https://prometheus.io)
 
 ## Usage
 
-To getting started make use of the module by adding the following line to Terraform file (e. g. `main.tf`):
-
-```terraform
-module "monitoring" {
-  source = "github.com/dutterbutter/gran-canarias"
-
-  prometheus_hostname   = "prometheus.example.com"
-  alertmanager_hostname = "alertmanager.example.com"
-  grafana_hostname      = "grafana.example.com"
-  config_bucket_name    = "my-monitoring-config"
-}
-```
-
 In order to get the module you will have to (re)initialize Terraform:
 
 ```

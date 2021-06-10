@@ -19,7 +19,7 @@ datasources:
   orgId: 1
   # <string> url
   # TODO: make configurable
-  url: http://localhost:9090
+  url: http://localhost:80
   # <string> database password, if used
   password:
   # <string> database user, if used
@@ -29,9 +29,9 @@ datasources:
   # <bool> enable/disable basic auth
   basicAuth: false
   # <string> basic auth username, if used
-  basicAuthUser:
+  basicAuthUser: admin
   # <string> basic auth password, if used
-  basicAuthPassword:
+  basicAuthPassword: password
   # <bool> enable/disable with credentials headers
   withCredentials:
   # <bool> mark as default datasource. Max one per org
